@@ -25,7 +25,7 @@ module Appraisal
     end
 
     def group(name, &block)
-      @groups[name] = Group.new(name, &block)
+      @groups[name] = Group.new(name, dependencies, &block)
     end
 
     def source(source)
